@@ -1,0 +1,15 @@
+name: OAS-to-SW
+description: OAS-to-SW
+inputs:
+  cmdline:
+    description: Commandline arguments for the utility
+    required: "true"
+    default: -h
+outputs:
+  time: # unused
+    description: unused ATM
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+    - ${{ inputs.cmdline }}
